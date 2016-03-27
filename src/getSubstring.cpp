@@ -19,5 +19,16 @@ original String
 
 char * get_sub_string(char *str, int i, int j){
 
-    return NULL;
+	int diff = 0;
+	char *retsub;
+	if (str == NULL)
+		return NULL;
+	diff = j - i;
+	if (diff < 0)
+		return NULL;
+	diff++;
+	retsub = (char *)malloc(sizeof(char)*(diff));
+	retsub= str+i;
+	retsub[diff] = '\0';
+	return retsub;
 }
